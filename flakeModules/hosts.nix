@@ -87,5 +87,5 @@ in
   ## make overlays list available to other modules
   ######################################################################
   #_module.args.allOverlays = allOverlays;
-  overlays = import ./overlays {inherit inputs;};
+  #overlays = import ./overlays {inherit inputs;};
 }
