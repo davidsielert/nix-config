@@ -62,7 +62,9 @@ outputs = inputs@{ flake-parts, ... }:
       ### 3. if you use a helper like easy-hosts / ez-configs #############
       # imports = [
       #   inputs.easy-hosts.flakeModule     # or inputs.ez-configs.flakeModule
-      #   ./flakeModules/hosts-easy.nix     # only holds the hosts attrset
+      #   ./flakeModules/hosts-eas  y.nix     # only holds the hosts attrset
       # ];
+        overlays = import ./nix/overlays {inherit inputs;};
     };
+
 }

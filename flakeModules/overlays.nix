@@ -25,7 +25,7 @@ let
   fileOverlays =
     builtins.listToAttrs (map
       (file: {
-        name  = builtins.removeSuffix ".nix" (lib.strings.baseNameOf file);
+        name  = lib.removeSuffix ".nix" (builtins.baseNameOf file);
         value = import (overlayDir + "/${file}") { inherit inputs; };
       })
       fileNames);
