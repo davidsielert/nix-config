@@ -41,7 +41,7 @@ let
         userConfig = users.${username};
       };
       modules = [
-        ./hosts/${hostname}
+        ../hosts/${hostname}
         inputs.home-manager.darwinModules.home-manager
         ({ ... }: {
           # pass common args to HM modules
