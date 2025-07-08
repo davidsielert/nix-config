@@ -8,9 +8,9 @@ let
   users = {
     david = {
       avatar   = ./files/avatar/face;
-      email    = "david@sielert.com";
+      email    = "456592+davidsielert@users.noreply.github.com";
       fullName = "David Sielert";
-      gitKey   = "C5810093";
+      #gitKey   = "C5810093";
       name     = "dsielert";
     };
       };
