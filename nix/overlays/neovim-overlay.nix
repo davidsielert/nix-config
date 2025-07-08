@@ -15,7 +15,7 @@ with final.pkgs.lib; let
   pkgs-locked = inputs.nixpkgs.legacyPackages.${pkgs.system};
 
   # This is the helper function that builds the Neovim derivation.
-  mkNeovim = pkgs.callPackage ./mkNeovim.nix {
+  mkNeovim = pkgs.callPackage ./../pkgs/mkNeovim.nix {
       inherit (pkgs-locked) wrapNeovimUnstable neovimUtils;
     };
 

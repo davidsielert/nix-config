@@ -73,7 +73,7 @@ with lib;
     # This uses the ignoreConfigRegexes list to filter
     # the nvim directory
     nvimRtpSrc = let
-      src = ../nvim;
+      src = ../../files/nvim; # The source directory for the Neovim runtime path
     in
       lib.cleanSourceWith {
         inherit src;
