@@ -5,6 +5,7 @@
     enableBashIntegration = true;
     enableZshIntegration = true;
     enableNushellIntegration = true;
+    enableFishIntegration = true;
 
     settings = {
       character = {

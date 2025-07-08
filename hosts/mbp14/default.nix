@@ -21,15 +21,7 @@
     };
   };
 
-  # Nix settings
-  nix = {
-    settings = {
-      experimental-features = "nix-command flakes";
-    };
-    optimise.automatic = true;
-    package = pkgs.nix;
-  };
-
+  
   # User configuration
   users.users.${userConfig.name} = {
     name = "${userConfig.name}";
