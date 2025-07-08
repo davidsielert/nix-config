@@ -11,9 +11,9 @@ let
       email    = "david@sielert.com";
       fullName = "David Sielert";
       gitKey   = "C5810093";
-      name     = "david";
+      name     = "dsielert";
     };
-  };
+      };
 
   # helper to get a pkgs set with overlays + unfree
   pkgsFor = system: import inputs.nixpkgs {

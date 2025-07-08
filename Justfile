@@ -1,4 +1,4 @@
-validate-mbp14:
+check:
     #! /usr/bin/env bash
     set -euo pipefail
 
