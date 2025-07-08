@@ -1,7 +1,5 @@
 
   {
-  pkgs,
-  outputs,
   userConfig,
   ...
 }: {

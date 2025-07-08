@@ -6,7 +6,7 @@
 }: {
   imports = [
     # Import the nix-darwin module
-    "../../modules/darwin/default.nix"
+    ./../../modules/darwin/default.nix
   ];
   # Nixpkgs configuration
   nixpkgs = {
