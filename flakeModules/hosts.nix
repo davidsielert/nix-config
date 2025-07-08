@@ -59,7 +59,7 @@ let
       extraSpecialArgs = {
         inherit inputs outputs hostname;
         userConfig = users.${username};
-        nhModules  = "${self}/modules/home-manager";
+        dsModules  = "${self}/modules/home-manager";
       };
       modules = [ ./home/${username}/${hostname} ];
     };
