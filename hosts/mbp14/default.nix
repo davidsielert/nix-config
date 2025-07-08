@@ -5,8 +5,9 @@
   ...
 }: {
   imports = [
-    # Import the nix-darwin module
+    # Import the default mac settings
     ./../../modules/darwin/default.nix
+    ./../../modules/common
   ];
   # Nixpkgs configuration
   nixpkgs = {
