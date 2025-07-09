@@ -6,7 +6,7 @@ let
 
   # ──────────────── 1. user directory ────────────────
   users = {
-    david = {
+    dsielert = {
       avatar   = ./files/avatar/face;
       email    = "456592+davidsielert@users.noreply.github.com";
       fullName = "David Sielert";
@@ -61,8 +61,7 @@ let
         userConfig = users.${username};
         dsModules  = "${self}/modules/home-manager";
       };
-      modules = [ "${inputs.self}/home/${username}/${hostname}"
- ];
+      modules = [ ../devnull ];
     };
 in
 {
@@ -70,7 +69,7 @@ in
   ## flake outputs (flake-parts style)
   ######################################################################
   flake.darwinConfigurations = {
-    mbp14 = mkDarwinConfiguration "mbp14" "david";
+    mbp14 = mkDarwinConfiguration "mbp14" "dsielert";
   };
 
   flake.nixosConfigurations = {
@@ -79,9 +78,7 @@ in
   };
 
   flake.homeConfigurations = {
-    "david@mbp14" = mkHomeConfiguration "aarch64-darwin" "dsielert" "mbp14";
-    # "nabokikh@energy"       = mkHomeConfiguration "x86_64-linux" "nabokikh" "energy";
-    # "nabokikh@nabokikh-z13" = mkHomeConfiguration "x86_64-linux" "nabokikh" "nabokikh-z13";
+    "dsielert@mbp14" = mkHomeConfiguration "aarch64-darwin" "dsielert" "mbp14";
   };
 
   ######################################################################
