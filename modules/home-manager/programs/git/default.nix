@@ -4,10 +4,10 @@
     enable = true;
     userName = userConfig.fullName;
     userEmail = userConfig.email;
-    signing = {
-      key = userConfig.gitKey;
-      signByDefault = true;
-    };
+    #signing = {
+    #  key = userConfig.gitKey;
+    #  signByDefault = true;
+    #};
     delta = {
       enable = true;
       options = {
@@ -16,10 +16,29 @@
         line-numbers = true;
         navigate = true;
         width = 280;
+        features = "side-by-side";
       };
     };
     extraConfig = {
-      pull.rebase = "true";
+      init.defaultBranch = "main";
+      push.autoSetupRemote = true;
+      pull.rebase = true;
+    };
+    aliases = {
+      # common aliases
+      br = "branch";
+      co = "checkout";
+      st = "status";
+      ls = "log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate";
+      ll = "log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --numstat";
+      cm = "commit -m";
+      ca = "commit -am";
+      dc = "diff --cached";
+      amend = "commit --amend -m";
+
+      # aliases for submodule
+      update = "submodule update --init --recursive";
+      foreach = "submodule foreach";
     };
   };
 }
