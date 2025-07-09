@@ -20,16 +20,17 @@ build:
 
 
 # Build *and* switch to it right away.
+test:
+  sudo echo {{env('HOSTNAME')}}
 switch:
-    darwin-rebuild switch --flake .#${HOSTNAME}
-
-# Re-build against the current lockfile, keeping the running system intact.
+    sudo darwin-rebuild switch --flake .
+    # Re-build against the current lockfile, keeping the running system intact.
 rebuild:
-    darwin-rebuild rebuild --flake .#${HOSTNAME}
+    sudo darwin-rebuild rebuild --flake . 
 
 # Quickly roll back to the previous darwin generation.
 rollback:
-    darwin-rebuild rollback
+    sudo darwin-rebuild rollback
 # ---------------------------------------------------------------------------
 # Development helpers
 # ---------------------------------------------------------------------------
