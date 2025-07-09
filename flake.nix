@@ -27,8 +27,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+         # Home manager
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -58,13 +59,6 @@ outputs = inputs@{ flake-parts, ... }:
         ./flakeModules/overlays.nix     # ← if you want
         ./flakeModules/hosts.nix        # ← emits all *Configurations
       ];
-
-      ### 3. if you use a helper like easy-hosts / ez-configs #############
-      # imports = [
-      #   inputs.easy-hosts.flakeModule     # or inputs.ez-configs.flakeModule
-      #   ./flakeModules/hosts-eas  y.nix     # only holds the hosts attrset
-      # ];
-        #overlays = import ./nix/overlays {inherit inputs;};
     };
 
 }
