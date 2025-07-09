@@ -111,6 +111,16 @@
         description = "Auto-activate virtualenv when changing directories";
         onVariable = "PWD";
       };
+      cdg = {
+        body = ''
+          set root (git rev-parse --show-toplevel ^/dev/null)
+          if test -n "$root"
+            cd $root
+          else
+            echo "Not in a Git repository"
+          end
+        '';
+      };
     };
   };
   programs.nushell = {
