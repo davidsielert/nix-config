@@ -61,7 +61,8 @@ let
         userConfig = users.${username};
         dsModules  = "${self}/modules/home-manager";
       };
-      modules = [ ./home/${username}/${hostname} ];
+      modules = [ "${inputs.self}/home/${username}/${hostname}"
+ ];
     };
 in
 {
