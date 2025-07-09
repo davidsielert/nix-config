@@ -18,7 +18,8 @@ build:
     sudo  nix build .#darwinConfigurations.${HOSTNAME}.system --extra-experimental-features '{{FEATURES}}' --show-trace
     echo "✅  Build completed — configuration is valid."
 
-
+hm:
+  home-manager switch --flake .#dsielert@mbp14
 # Build *and* switch to it right away.
 test:
   sudo echo {{env('HOSTNAME')}}

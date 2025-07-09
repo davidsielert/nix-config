@@ -143,7 +143,7 @@
       ];
     };
     envExtra = ''
-      export WORKON_HOME="/Users/davidsielert/.virtualenvs"; # Replace with your desired path
+      export WORKON_HOME="/Users/dsielert/.virtualenvs"; # Replace with your desired path
       export VIRTUALENVWRAPPER_PYTHON="${pkgs.python3}/bin/python3"
       export VIRTUALENVWRAPPER_VIRTUALENV="${pkgs.python3Packages.virtualenv}/bin/virtualenv"
     '';

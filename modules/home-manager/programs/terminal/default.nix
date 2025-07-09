@@ -1,7 +1,7 @@
 {
   imports = [
     #./helix # sucks
-    ./lazygit
+    # ./lazygit
     ./shell
     #    ./neovim
     #./nvf # full-blown IDE

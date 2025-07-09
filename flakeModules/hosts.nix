@@ -12,6 +12,7 @@ let
       fullName = "David Sielert";
       #gitKey   = "C5810093";
       name     = "dsielert";
+      username = "dsielert";
     };
       };
 
@@ -61,7 +62,7 @@ let
         userConfig = users.${username};
         dsModules  = "${self}/modules/home-manager";
       };
-      modules = [ ../devnull ];
+      modules = [ ./../home/${username}/${hostname} ];
     };
 in
 {

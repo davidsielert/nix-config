@@ -18,32 +18,29 @@
         width = 280;
       };
     };
+    
+
+  # Enable catppuccin theming for git delta
     extraConfig = {
+      init.defaultBranch = "main";
+      push.autoSetupRemote = true;
       pull.rebase = "true";
     };
-  };
+    aliases = {
+  # common aliases
+      br = "branch";
+      co = "checkout";
+      st = "status";
+      ls = "log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate";
+      ll = "log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --numstat";
+      cm = "commit -m";
+      ca = "commit -am";
+      dc = "diff --cached";
+      amend = "commit --amend -m";
 
-# Enable catppuccin theming for git delta
-  catppuccin.delta.enable = true;
-  extraConfig = {
-    init.defaultBranch = "main";
-    push.autoSetupRemote = true;
-    pull.rebase = true;
-  };
-  aliases = {
-# common aliases
-    br = "branch";
-    co = "checkout";
-    st = "status";
-    ls = "log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate";
-    ll = "log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --numstat";
-    cm = "commit -m";
-    ca = "commit -am";
-    dc = "diff --cached";
-    amend = "commit --amend -m";
-
-# aliases for submodule
-    update = "submodule update --init --recursive";
-    foreach = "submodule foreach";
+  # aliases for submodule
+      update = "submodule update --init --recursive";
+      foreach = "submodule foreach";
+    };
   };
                    }
