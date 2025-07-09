@@ -4,6 +4,10 @@
   pkgs,
   ...
 }: {
-  imports = [ ../programs/terminal ];
+  imports = [ 
+  ../programs/devnull
+  ../programs/terminal 
+
+  ];
 }
     

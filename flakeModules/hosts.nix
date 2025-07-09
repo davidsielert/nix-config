@@ -78,7 +78,7 @@ in
   };
 
   flake.homeConfigurations = {
-    "david@mbp14" = mkHomeConfiguration "aarch64-darwin" "david" "mbp14";
+    "david@mbp14" = mkHomeConfiguration "aarch64-darwin" "dsielert" "mbp14";
     # "nabokikh@energy"       = mkHomeConfiguration "x86_64-linux" "nabokikh" "energy";
     # "nabokikh@nabokikh-z13" = mkHomeConfiguration "x86_64-linux" "nabokikh" "nabokikh-z13";
   };
