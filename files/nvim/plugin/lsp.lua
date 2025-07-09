@@ -75,7 +75,7 @@ local servers = {
   svelte           = {},
   yamlls           = {},
   cssls            = {},
-  -- not needed? uses lazydev  
+  -- not needed? uses lazydev
   -- lua_ls           = {
   --   settings = {
   --     Lua = {
@@ -91,8 +91,8 @@ local servers = {
   --     },
   --   },
   -- },
-  tailwindcss      = {}
-
+  tailwindcss      = {},
+  nil_ls           = {}
 }
 
 -- INITIALISE EACH SERVER ------------------------------------------------------

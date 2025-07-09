@@ -1,13 +1,13 @@
 {userConfig, ...}: {
-# Install git via home-manager module
+  # Install git via home-manager module
   programs.git = {
     enable = true;
     userName = userConfig.fullName;
     userEmail = userConfig.email;
-# signing = {
-#   key = userConfig.gitKey;
-#   signByDefault = true;
-# };
+    # signing = {
+    #   key = userConfig.gitKey;
+    #   signByDefault = true;
+    # };
     delta = {
       enable = true;
       options = {
@@ -18,16 +18,15 @@
         width = 280;
       };
     };
-    
 
-  # Enable catppuccin theming for git delta
+    # Enable catppuccin theming for git delta
     extraConfig = {
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
       pull.rebase = "true";
     };
     aliases = {
-  # common aliases
+      # common aliases
       br = "branch";
       co = "checkout";
       st = "status";
@@ -38,9 +37,9 @@
       dc = "diff --cached";
       amend = "commit --amend -m";
 
-  # aliases for submodule
+      # aliases for submodule
       update = "submodule update --init --recursive";
       foreach = "submodule foreach";
     };
   };
-                   }
+}

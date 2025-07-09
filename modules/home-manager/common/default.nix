@@ -10,14 +10,13 @@
       outputs.overlays.stable-packages
     ];
   };
-  imports = [ 
-  ./apps.nix
-  ../programs/git
-  ../programs/terminal 
-
+  imports = [
+    ./apps.nix
+    ../programs/git
+    ../programs/terminal
   ];
 
-   # Home-Manager configuration for the user's home environment
+  # Home-Manager configuration for the user's home environment
   home = {
     username = "${userConfig.name}";
     homeDirectory =
@@ -26,4 +25,3 @@
       else "/home/${userConfig.name}";
   };
 }
-    

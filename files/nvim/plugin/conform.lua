@@ -29,6 +29,7 @@ conform.setup {
     typescript = { 'biome' },
     html       = { 'biome' },
     css        = { 'biome' },
+    nix        = { 'alejandra' },
   },
 
   -- per-formatter overrides ---------------------------------------------------
@@ -50,5 +51,5 @@ conform.setup {
 }
 
 -- OPTIONAL: keymap to format the current buffer on demand ---------------------
-vim.keymap.set('n', '<leader>f', function() conform.format() end,
+vim.keymap.set('n', '<leader>fc', function() conform.format() end,
   { desc = 'Format current buffer with conform.nvim' })

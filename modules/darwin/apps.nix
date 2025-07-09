@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-homebrew = {
+  homebrew = {
     enable = true;
 
     onActivation = {
@@ -60,4 +60,4 @@ homebrew = {
       # "wireshark" # network analyzer
     ];
   };
-  }
+}

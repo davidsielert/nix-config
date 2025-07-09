@@ -16,8 +16,8 @@ with final.pkgs.lib; let
 
   # This is the helper function that builds the Neovim derivation.
   mkNeovim = pkgs.callPackage ./../pkgs/mkNeovim.nix {
-      inherit (pkgs-locked) wrapNeovimUnstable neovimUtils;
-    };
+    inherit (pkgs-locked) wrapNeovimUnstable neovimUtils;
+  };
 
   # A plugin can either be a package or an attrset, such as
   # { plugin = <plugin>; # the package, e.g. pkgs.vimPlugins.nvim-cmp
@@ -116,9 +116,9 @@ with final.pkgs.lib; let
     yaml-language-server
     typescript-language-server
     svelte-language-server
-   python312Packages.jedi-language-server
-   python312Packages.mypy
-   biome
+    python312Packages.jedi-language-server
+    python312Packages.mypy
+    biome
     nil # nix LSP
     vscode-langservers-extracted
     black
@@ -160,29 +160,33 @@ in {
   #   ];
   #   inherit extraPackages;
   # };
-  vimPlugins = prev.vimPlugins // {
-    tailwindcssColorizerCmp = build {
-      pname   = "tailwindcss-colorizer-cmp";
-      version = "2024-12-23";
-      src = prev.fetchFromGitHub {
-        owner  = "roobert";
-        repo   = "tailwindcss-colorizer-cmp.nvim";
-        rev    = "3d3cd95e4a4135c250faf83dd5ed61b8e5502b86";
-        sha256 = "sha256-PIkfJzLt001TojAnE/rdRhgVEwSvCvUJm/vNPLSWjpY=";   # fill in the hash
+  vimPlugins =
+    prev.vimPlugins
+    // {
+      tailwindcssColorizerCmp = build {
+        pname = "tailwindcss-colorizer-cmp";
+        version = "2024-12-23";
+        src = prev.fetchFromGitHub {
+          owner = "roobert";
+          repo = "tailwindcss-colorizer-cmp.nvim";
+          rev = "3d3cd95e4a4135c250faf83dd5ed61b8e5502b86";
+          sha256 = "sha256-PIkfJzLt001TojAnE/rdRhgVEwSvCvUJm/vNPLSWjpY="; # fill in the hash
+        };
       };
-    };
 
-    vimPlugins = pkgs.vimPlugins // {
-    gemini-nvim = build {
-      pname = "gemini-nvim";
-      version = "2025-05-02"; # Use the current date or the latest commit date
-      src = pkgs.fetchFromGitHub {
-        owner = "kiddos";
-        repo = "gemini.nvim";
-        rev = "master"; # Replace with a specific commit hash for stability
-        sha256 = ""; # Replace with the actual hash
-      };
+      vimPlugins =
+        pkgs.vimPlugins
+        // {
+          gemini-nvim = build {
+            pname = "gemini-nvim";
+            version = "2025-05-02"; # Use the current date or the latest commit date
+            src = pkgs.fetchFromGitHub {
+              owner = "kiddos";
+              repo = "gemini.nvim";
+              rev = "master"; # Replace with a specific commit hash for stability
+              sha256 = ""; # Replace with the actual hash
+            };
+          };
+        };
     };
-  };
-  };
 }

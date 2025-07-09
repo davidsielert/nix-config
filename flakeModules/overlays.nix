@@ -1,4 +1,3 @@
-
 # flakeModules/overlays.nix
 #
 # A flake-parts module that
@@ -11,24 +10,24 @@
 # Each overlay file can be a traditional
 #   self: super: { … }
 # or the newer flake-departing form that takes `{ inputs, ... }`.
-
-{ inputs, lib, ... }:
-
-let
+{
+  inputs,
+  lib,
+  ...
+}: let
   overlayDir = ../nix/overlays;
 
   # ── overlay files in nix/overlays/ ────────────────────────────────────
   fileNames =
     builtins.attrNames
-      (lib.filterAttrs (_: t: t == "regular") (builtins.readDir overlayDir));
+    (lib.filterAttrs (_: t: t == "regular") (builtins.readDir overlayDir));
 
-  fileOverlays =
-    builtins.listToAttrs (map
-      (file: {
-        name  = lib.removeSuffix ".nix" (builtins.baseNameOf file);
-        value = import (overlayDir + "/${file}") { inherit inputs; };
-      })
-      fileNames);
+  fileOverlays = builtins.listToAttrs (map
+    (file: {
+      name = lib.removeSuffix ".nix" (builtins.baseNameOf file);
+      value = import (overlayDir + "/${file}") {inherit inputs;};
+    })
+    fileNames);
 
   # ── overlays that come from other flakes -----------------------------
   externalOverlays = {
@@ -36,9 +35,8 @@ let
   };
 
   overlayAttrs = fileOverlays // externalOverlays;
-  overlayList  = lib.attrValues overlayAttrs;
-in
-{
+  overlayList = lib.attrValues overlayAttrs;
+in {
   ## 1. expose them to the outside world  ────────────────────────────────
   flake.overlays = overlayAttrs;
 

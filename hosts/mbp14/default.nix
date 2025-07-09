@@ -21,14 +21,12 @@
     };
   };
 
-  
   # User configuration
   users.users.${userConfig.name} = {
     name = "${userConfig.name}";
     home = "/Users/${userConfig.name}";
   };
 
- 
   # Zsh configuration
   programs.zsh.enable = true;
 
