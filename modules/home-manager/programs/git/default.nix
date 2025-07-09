@@ -22,7 +22,4 @@
       pull.rebase = "true";
     };
   };
-
-  # Enable catppuccin theming for git delta
-  catppuccin.delta.enable = true;
 }
