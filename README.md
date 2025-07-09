@@ -1,4 +1,10 @@
-Sources
+# About
+Creates two modules, a system level module for NixOS or Darwin-nix and a home manager module 
 
-https://github.com/AlexNabokikh/nix-config
-https://github.com/nix-community/kickstart-nix.nvim
+Apply each separately. 
+
+
+# Sources
+
+- https://github.com/AlexNabokikh/nix-config
+- https://github.com/nix-community/kickstart-nix.nvim
