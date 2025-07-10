@@ -59,6 +59,7 @@
     rke
     nixpkgs-fmt
     alejandra
+    fastfetch
   ];
   programs = {
     eza = {
