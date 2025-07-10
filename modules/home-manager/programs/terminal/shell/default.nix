@@ -122,6 +122,13 @@
         '';
       };
     };
+    shellAliases = {
+      ls = "eza";
+      ll = "eza -l";
+      la = "eza -la";
+      lt = "eza -lT"; # Tree view
+      l = "eza -lh"; # Human-readable sizes
+    };
   };
   programs.nushell = {
     enable = true;
