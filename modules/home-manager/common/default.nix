@@ -24,4 +24,8 @@
       then "/Users/${userConfig.name}"
       else "/home/${userConfig.name}";
   };
+  catppuccin = {
+    flavor = "macchiato";
+    accent = "mocha";
+  };
 }
