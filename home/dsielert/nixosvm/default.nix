@@ -1,7 +1,7 @@
-{dsModules, ...}: {
+{nhModules, ...}: {
   imports = [
-    "${dsModules}/common"
-    "${dsModules}/desktop/hyprland"
+    "${nhModules}/common"
+    "${nhModules}/desktop/hyprland"
   ];
 
   # Enable home-manager

@@ -1,6 +1,6 @@
-{dsModules, ...}: {
+{nhModules, ...}: {
   imports = [
-    "${dsModules}/common"
+    "${nhModules}/common"
   ];
   # Enable home-manager
   programs.home-manager.enable = true;

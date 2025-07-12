@@ -73,7 +73,7 @@
       extraSpecialArgs = {
         inherit inputs outputs hostname;
         userConfig = users.${username};
-        dsModules = "${self}/modules/home-manager";
+        nhModules = "${self}/modules/home-manager";
       };
       modules = [./../home/${username}/${hostname}];
     };
