@@ -44,7 +44,7 @@
         userConfig = users.${username};
         nixosModules = "${self}/modules/nixos";
       };
-      modules = [./hosts/${hostname}];
+      modules = [../hosts/${hostname}];
     };
 
   mkDarwinConfiguration = hostname: username:
@@ -86,6 +86,7 @@ in {
   };
 
   flake.nixosConfigurations = {
+    nixosvm        = mkNixosConfiguration "nixosvm" "david";
     # energy       = mkNixosConfiguration "energy" "nabokikh";
     # nabokikh-z13 = mkNixosConfiguration "nabokikh-z13" "nabokikh";
   };
