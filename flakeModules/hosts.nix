@@ -86,8 +86,7 @@ in {
   };
 
   flake.nixosConfigurations = {
-    nixosvm = mkNixosConfiguration "nixosvm" "david";
-    nixosvm2 = mkNixosConfiguration "nixosvm" "dielert";
+    nixosvm = mkNixosConfiguration "nixosvm" "dielert";
 
     # energy       = mkNixosConfiguration "energy" "nabokikh";
     # nabokikh-z13 = mkNixosConfiguration "nabokikh-z13" "nabokikh";
@@ -95,6 +94,7 @@ in {
 
   flake.homeConfigurations = {
     "dsielert@mbp14" = mkHomeConfiguration "aarch64-darwin" "dsielert" "mbp14";
+    "dsielert@nixosvm" = mkHomeConfiguration "aarch64-darwin" "dsielert" "nixosvm";
   };
 
   ######################################################################
