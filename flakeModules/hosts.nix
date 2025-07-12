@@ -86,7 +86,9 @@ in {
   };
 
   flake.nixosConfigurations = {
-    nixosvm        = mkNixosConfiguration "nixosvm" "david";
+    nixosvm = mkNixosConfiguration "nixosvm" "david";
+    nixosvm2 = mkNixosConfiguration "nixosvm" "dielert";
+
     # energy       = mkNixosConfiguration "energy" "nabokikh";
     # nabokikh-z13 = mkNixosConfiguration "nabokikh-z13" "nabokikh";
   };
