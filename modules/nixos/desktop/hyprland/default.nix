@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   # Enable GDM display manager
-  services.displayManager.gdm.enable = true;
+  services.displayManager.sddm.enable = true;
 
   # Call dbus-update-activation-environment on login
   services.xserver.updateDbusEnvironment = true;
@@ -24,7 +24,7 @@
   security.polkit.enable = true;
   security.pam.services = {
     hyprlock = {};
-    gdm.enableGnomeKeyring = true;
+    #  gdm.enableGnomeKeyring = true;
   };
 
   # List of Hyprland specific packages
