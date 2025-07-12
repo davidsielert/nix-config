@@ -18,6 +18,14 @@
       name = "dsielert";
       username = "dsielert";
     };
+    david = {
+      avatar = ./files/avatar/face.png;
+      email = "456592+davidsielert@users.noreply.github.com";
+      fullName = "David Sielert";
+      #gitKey   = "C5810093";
+      name = "david";
+      username = "david";
+    };
   };
 
   # helper to get a pkgs set with overlays + unfree
