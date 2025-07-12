@@ -40,6 +40,7 @@
       # use the exact commit
       url = "github:NixOS/nixpkgs/fb80ed6efd437ac2ef2f98681d8a06c08fc5966e";
     };
+    catppuccin.url = "github:catppuccin/nix";
   };
   outputs = inputs @ {flake-parts, ...}:
     flake-parts.lib.mkFlake {inherit inputs;} {
