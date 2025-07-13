@@ -37,6 +37,7 @@
     #j../programs/tmux
     ../programs/ulauncher
     #jku../programs/zsh
+    ../programs/rofi
   ];
 
   # Home-Manager configuration for the user's home environment
