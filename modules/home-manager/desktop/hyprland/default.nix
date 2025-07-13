@@ -28,10 +28,10 @@
   };
 
   # Source hyprland config from the home-manager store
-  # xdg.configFile = {
-  #  "hypr/hyprland.conf" = {
-  #    source = ./hyprland.conf;
-  #  };
+  xdg.configFile = {
+    #  "hypr/hyprland.conf" = {
+    #    source = ./hyprland.conf;
+    #  };
 
     "hypr/hyprpaper.conf".text = ''
       splash = false
