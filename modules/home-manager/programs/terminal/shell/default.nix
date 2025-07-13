@@ -13,6 +13,9 @@
   programs.fish = {
     enable = true;
     #useBabelfish = true;
+    shellInit = ''
+      set -gx EDITOR "nvim"
+    '';
     plugins = with pkgs; [
       {
         name = "bass";
