@@ -4,7 +4,7 @@
   lib,
   ...
 }: {
-  programs.hyprland = {
+  wayland.windowManager.hyprland = {
     enable = true; # installs Hyprland + Xwayland
     xwayland.enable = true;
 
@@ -241,14 +241,14 @@
 
   # Helper packages referenced by your binds / execs
   # (add or remove as needed)
-  environment.systemPackages = with pkgs; [
+  home.packages = with pkgs; [
     alacritty
     brave
     nautilus
     telegram-desktop
-    gnome.gnome-calculator
-    gnome.dconf-editor
-    gnome.gnome-pomodoro
+    gnome-calculator
+    dconf-editor
+    gnome-pomodoro
     pamixer
     grim
     slurp
