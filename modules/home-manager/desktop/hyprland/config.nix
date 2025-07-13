@@ -52,8 +52,8 @@
         "XDG_SCREENSHOTS_DIR,~/screens"
 
         # VMware / software rendering flags
-        "WLR_NO_HARDWARE_CURSORS,1"
-        "LIBGL_ALWAYS_SOFTWARE,1"
+        # "WLR_NO_HARDWARE_CURSORS,1"
+        # "LIBGL_ALWAYS_SOFTWARE,1"
         # "WLR_RENDERER_ALLOW_SOFTWARE,1"
       ];
 
