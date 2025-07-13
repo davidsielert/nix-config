@@ -4,6 +4,9 @@
   pkgs,
   ...
 }: {
+  home.sessionVariables = {
+    EDITOR = "nvim"; # Or "vim", "emacs", "code -w", etc.
+  };
   home.packages = with pkgs; [
     wakatime-cli
   ];
@@ -33,7 +36,7 @@
           owner = "davidsielert";
           repo = "plugin-kubectl";
           rev = "78c4ec5b71fd5b7a1ea687fc3d6c9b24f28d96c4";
-          sha256 = "sha256-LZQDqvsqz1jDXAzpIOIKn090e3gQ1ugzk8Bw+xZ2efA=";
+          sha256 = "sha256-vC8om7LI3+rxd8+u4yiimz9UBywyM/BI5X92rW0aB5A=";
         };
       }
       {
