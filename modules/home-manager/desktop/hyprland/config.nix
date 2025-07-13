@@ -15,18 +15,15 @@
 
       #─────────────────── autostart apps ────────────────#
       "exec-once" = [
-        "hyprpaper"
         "hypridle"
-        "gnome-keyring-daemon --start --components=ssh,secrets"
-        "swaync"
-        "wl-paste --watch cliphist store"
-        "hyprctl setcursor Catppuccin-Mocha-Lavender-Cursors 36"
-        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "ags -b hypr"
-        "hyprland-session-monitor"
-        "[float;swapfocus] foot --title calculator qalc"
+        "gnome-keyring-daemon --start --components=secrets"
+        "kanshi"
         "nm-applet --indicator"
-        "blueman-applet"
+        "swaync"
+        "ulauncher --hide-window"
+        "waybar"
+        "wl-paste --watch cliphist store"
+        "wlsunset -l 52.23 -L 21.01"
       ];
 
       #──────────────────── monitor block ────────────────#
@@ -49,7 +46,7 @@
 
       #──────────────────── input ────────────────────────#
       input = {
-        kb_layout = "us,pl,ru";
+        kb_layout = "us";
         kb_options = "grp:alt_shift_toggle";
         repeat_delay = 250;
         repeat_rate = 50;
