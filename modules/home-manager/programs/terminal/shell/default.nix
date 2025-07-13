@@ -4,6 +4,7 @@
   pkgs,
   ...
 }: {
+  imports = [./patch_kubectl.nix];
   home.packages = with pkgs; [
     wakatime-cli
   ];
@@ -70,13 +71,19 @@
 
     '';
     interactiveShellInit = ''
-      status is-interactive; and begin
-        set fish_tmux_autostart true
-      end
-        # ~/.config/fish/config.fish
-        set -gx HOMEBREW_PREFIX /opt/homebrew
-        set -gx HOMEBREW_CELLAR /opt/homebrew/Cellar
-        set -gx HOMEBREW_REPOSITORY /opt/homebrew
+      # Fix for kubectl plugin which expects a $path variable
+          set __kubectl_plugin_path "$__fish_config_dir/plugins/kubectl"
+          if test -f "$__kubectl_plugin_path/init.fish"
+            set --local path $__kubectl_plugin_path
+            source $__kubectl_plugin_path/init.fish
+          end
+            status is-interactive; and begin
+              set fish_tmux_autostart true
+            end
+              # ~/.config/fish/config.fish
+              set -gx HOMEBREW_PREFIX /opt/homebrew
+              set -gx HOMEBREW_CELLAR /opt/homebrew/Cellar
+              set -gx HOMEBREW_REPOSITORY /opt/homebrew
     '';
     functions = {
       auto_activate_venv = {
