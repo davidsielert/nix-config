@@ -27,15 +27,15 @@
         name = "wakatime";
         src = fishPlugins.wakatime-fish;
       }
-      # {
-      #   name = "kubectl";
-      #   src = pkgs.fetchFromGitHub {
-      #     owner = "blackjid";
-      #     repo = "plugin-kubectl";
-      #     rev = "9de10c9b3bb62fb250ad2e4cac7be12eb8efde6f";
-      #     sha256 = "sha256-LZQDqvsqz1jDXAzpIOIKn090e3gQ1ugzk8Bw+xZ2efA=";
-      #   };
-      # }
+      {
+        name = "kubectl";
+        src = pkgs.fetchFromGitHub {
+          owner = "davidsielert";
+          repo = "plugin-kubectl";
+          rev = "78c4ec5b71fd5b7a1ea687fc3d6c9b24f28d96c4";
+          sha256 = "sha256-LZQDqvsqz1jDXAzpIOIKn090e3gQ1ugzk8Bw+xZ2efA=";
+        };
+      }
       {
         name = "tmux";
         src = pkgs.fetchFromGitHub {
