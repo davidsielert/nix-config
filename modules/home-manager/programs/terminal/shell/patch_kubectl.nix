@@ -18,6 +18,5 @@
   '';
 in {
   # Overwrite the original file produced by Fisher/Nix
-  home.file."${config.xdg.configHome}/fish/conf.d/kubectl.fish".text =
-    kubectlFishPatched;
+  home.file."${config.xdg.configHome}/fish/conf.d/plugin-kubectl2.fish".text = lib.mkForce kubectlFishPatched;
 }
