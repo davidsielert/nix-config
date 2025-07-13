@@ -20,15 +20,15 @@
     #    ../programs/atuin
     #    ../programs/bat
     #    ../programs/brave
-    #  ../programs/btop
+    ../programs/btop
     # ../programs/fastfetch
-    #   ../programs/fzf
+    ../programs/fzf
     #    ../programs/git
     #    ../programs/go
     #    ../programs/gpg
     #    ../programs/k9s
     #    ../programs/krew
-    #    ../programs/lazygit
+    ../programs/lazygit
     #../programs/neovim
     ../programs/obs-studio
     ../programs/saml2aws

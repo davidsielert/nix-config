@@ -91,7 +91,7 @@
 
       #──────────────────── dwindle / master (if present) #
       dwindle = {preserve_split = "yes";};
-      master = {new_is_master = true;};
+      master = {new_on_top = true;};
 
       #──────────────────── gestures / misc───────────────#
       gestures.workspace_swipe = "on";
@@ -148,8 +148,8 @@
       #──────────────────── key-bindings (64) ─────────────#
       bind = [
         # app launches & layout
-        "$mainMod SHIFT, Return, exec, alacritty"
-        "$mainMod SHIFT, B, exec, brave"
+        "$mainMod SHIFT, Return, exec, ghostty"
+        "$mainMod SHIFT, B, exec, vivaldi"
         "$mainMod SHIFT, F, exec, nautilus"
         "$mainMod SHIFT, T, exec, Telegram"
         "CTRL ALT, P, exec, gnome-pomodoro --start-stop"
@@ -230,7 +230,7 @@
   # (add or remove as needed)
   home.packages = with pkgs; [
     alacritty
-    brave
+    vivaldi
     nautilus
     telegram-desktop
     gnome-calculator
@@ -247,6 +247,7 @@
     swaynotificationcenter
     wl-clipboard
     cliphist
+    rofi-wayland
     hyprlock
     # your custom scripts assumed to be in ~/.local/bin
   ];
