@@ -11,7 +11,7 @@
   # ──────────────── 1. user directory ────────────────
   users = {
     dsielert = {
-      avatar = i../files/avatar/face.png;
+      avatar = ../files/avatar/face.png;
       email = "456592+davidsielert@users.noreply.github.com";
       fullName = "David Sielert";
       #gitKey   = "C5810093";
@@ -89,7 +89,7 @@ in {
   };
 
   flake.nixosConfigurations = {
-    nixosvm = mkNixosConfiguration "nixosvm" "dielert";
+    nixosvm = mkNixosConfiguration "nixosvm" "dsielert";
 
     # energy       = mkNixosConfiguration "energy" "nabokikh";
     # nabokikh-z13 = mkNixosConfiguration "nabokikh-z13" "nabokikh";
