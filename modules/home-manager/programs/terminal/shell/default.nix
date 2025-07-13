@@ -27,15 +27,15 @@
         name = "wakatime";
         src = fishPlugins.wakatime-fish;
       }
-      {
-        name = "kubectl";
-        src = pkgs.fetchFromGitHub {
-          owner = "blackjid";
-          repo = "plugin-kubectl";
-          rev = "9de10c9b3bb62fb250ad2e4cac7be12eb8efde6f";
-          sha256 = "sha256-LZQDqvsqz1jDXAzpIOIKn090e3gQ1ugzk8Bw+xZ2efA=";
-        };
-      }
+      # {
+      #   name = "kubectl";
+      #   src = pkgs.fetchFromGitHub {
+      #     owner = "blackjid";
+      #     repo = "plugin-kubectl";
+      #     rev = "9de10c9b3bb62fb250ad2e4cac7be12eb8efde6f";
+      #     sha256 = "sha256-LZQDqvsqz1jDXAzpIOIKn090e3gQ1ugzk8Bw+xZ2efA=";
+      #   };
+      # }
       {
         name = "tmux";
         src = pkgs.fetchFromGitHub {
@@ -70,19 +70,14 @@
 
     '';
     interactiveShellInit = ''
-      # Fix for kubectl plugin which expects a $path variable
-          set __kubectl_plugin_path "$__fish_config_dir/plugins/kubectl"
-          if test -f "$__kubectl_plugin_path/init.fish"
-            set --local path $__kubectl_plugin_path
-            source $__kubectl_plugin_path/init.fish
-          end
-            status is-interactive; and begin
-              set fish_tmux_autostart true
-            end
-              # ~/.config/fish/config.fish
-              set -gx HOMEBREW_PREFIX /opt/homebrew
-              set -gx HOMEBREW_CELLAR /opt/homebrew/Cellar
-              set -gx HOMEBREW_REPOSITORY /opt/homebrew
+
+      status is-interactive; and begin
+        set fish_tmux_autostart true
+      end
+        # ~/.config/fish/config.fish
+        set -gx HOMEBREW_PREFIX /opt/homebrew
+        set -gx HOMEBREW_CELLAR /opt/homebrew/Cellar
+        set -gx HOMEBREW_REPOSITORY /opt/homebrew
     '';
     functions = {
       auto_activate_venv = {
