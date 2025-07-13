@@ -60,6 +60,7 @@
     nixpkgs-fmt
     alejandra
     fastfetch
+    ghostty
   ];
   programs = {
     eza = {

@@ -11,6 +11,7 @@
   nixpkgs = {
     overlays = [
       outputs.overlays.stable-packages
+      outputs.ghostty.overlays.default
     ];
 
     config = {
