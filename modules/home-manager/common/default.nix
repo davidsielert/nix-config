@@ -14,21 +14,21 @@
     ./apps.nix
     ../programs/git
     ../programs/terminal
-    ../misc/qt
-    ../programs/aerospace
+    #    ../misc/qt
+    #    ../programs/aerospace
     ../programs/alacritty
-    ../programs/atuin
-    ../programs/bat
-    ../programs/brave
-    ../programs/btop
-    ../programs/fastfetch
-    ../programs/fzf
-    ../programs/git
-    ../programs/go
-    ../programs/gpg
-    ../programs/k9s
-    ../programs/krew
-    ../programs/lazygit
+    #    ../programs/atuin
+    #    ../programs/bat
+    #    ../programs/brave
+    #  ../programs/btop
+    # ../programs/fastfetch
+    #   ../programs/fzf
+    #    ../programs/git
+    #    ../programs/go
+    #    ../programs/gpg
+    #    ../programs/k9s
+    #    ../programs/krew
+    #    ../programs/lazygit
     #../programs/neovim
     ../programs/obs-studio
     ../programs/saml2aws
