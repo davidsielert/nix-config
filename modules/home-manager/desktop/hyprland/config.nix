@@ -15,6 +15,7 @@
 
       #─────────────────── autostart apps ────────────────#
       "exec-once" = [
+        "hyprpaper"
         "hypridle"
         "gnome-keyring-daemon --start --components=secrets"
         "kanshi"
@@ -27,8 +28,18 @@
       ];
 
       #──────────────────── monitor block ────────────────#
-      monitor = ["Virtual-1,preferred,auto,1"];
-
+      monitor = ["DP-2,2560x1440@60,3440x00,1"];
+      workspace = [
+        "1, monitor:DP-1"
+        "2, monitor:DP-1"
+        "3, monitor:DP-1"
+        "4, monitor:DP-1"
+        "5, monitor:DP-1"
+        "6, monitor:DP-1"
+        "7, monitor:DP-1"
+        "8, monitor:DP-1"
+        "9, monitor:DP-1"
+      ];
       #──────────────────── env vars ─────────────────────#
       env = [
         # Wayland/desktop hints
@@ -37,7 +48,7 @@
         "XDG_SESSION_DESKTOP,Hyprland"
 
         # Cursor + cursor size
-        "XCURSOR_SIZE,36"
+        "XCURSOR_SIZE,24"
 
         # Qt + screenshots dir
         "QT_QPA_PLATFORM,wayland"
@@ -90,7 +101,11 @@
       };
 
       #──────────────────── dwindle / master (if present) #
-      dwindle = {preserve_split = "yes";};
+      dwindle = {
+        preserve_split = "yes";
+        pseudotile = "yes";
+        special_scale_factor = 0.8;
+      };
       master = {new_on_top = true;};
 
       #──────────────────── gestures / misc───────────────#
@@ -138,6 +153,11 @@
         "workspace special, class:^(gnome-pomodoro)$"
         "pin, title:^(as_toolbar)$"
       ];
+      windowrulev2 = [
+        "workspace special:1password ,title:(.*)(1Pasword)$"
+        "workspace special:notion,class:^(notion-app)$"
+        "workspace special:music,class:^(Cider)$"
+      ];
 
       #──────────────────── mouse binds ──────────────────#
       bindm = [
@@ -148,8 +168,8 @@
       #──────────────────── key-bindings (64) ─────────────#
       bind = [
         # app launches & layout
-        "$mainMod SHIFT, Return, exec, ghostty"
-        "$mainMod SHIFT, B, exec, vivaldi"
+        "$mainMod , Return, exec, ghostty"
+        "$mainMod , F2, exec, vivaldi"
         "$mainMod SHIFT, F, exec, nautilus"
         "$mainMod SHIFT, T, exec, Telegram"
         "$mainMod, D, exec, rofi -show drun -theme $HOME/.config/rofi/launchers/type-1/style-9.rasi"
@@ -233,7 +253,6 @@
     alacritty
     vivaldi
     nautilus
-    telegram-desktop
     gnome-calculator
     dconf-editor
     gnome-pomodoro
