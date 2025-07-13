@@ -32,5 +32,10 @@
   };
 
   # Enable catppuccin theming for GTK apps.
-  catppuccin.gtk.enable = true;
+  catppuccin.gtk = {
+    accent = "mauve"; # Optional
+    size = "compact"; # Optional
+    tweaks = ["rimless"]; # Optional
+    variant = "mocha";
+  };
 }
