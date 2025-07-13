@@ -2,14 +2,27 @@
   inputs,
   hostname,
   nixosModules,
+  outputs,
   ...
 }: {
   imports = [
     ./hardware-configuration.nix
+
+    ./../../modules/common
     "${nixosModules}/common"
-    "${nixosModules}/services/tlp"
     "${nixosModules}/desktop/hyprland"
   ];
+  # Nixpkgs configuration
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.stable-packages
+      outputs.overlays.neovim-overlay
+    ];
+
+    config = {
+      allowUnfree = true;
+    };
+  };
 
   # Set hostname
   networking.hostName = hostname;
