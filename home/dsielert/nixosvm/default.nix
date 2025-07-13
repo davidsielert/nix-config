@@ -1,5 +1,11 @@
-{nhModules, ...}: {
+{
+  nhModules,
+  outputs,
+  ...
+}: {
   imports = [
+    outputs.catppuccin.homeManagerModules.catppuccin
+
     "${nhModules}/common"
     "${nhModules}/desktop/hyprland"
   ];

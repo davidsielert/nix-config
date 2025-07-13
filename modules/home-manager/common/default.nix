@@ -25,7 +25,6 @@
       else "/home/${userConfig.name}";
   };
   catppuccin = {
-    flavor = "macchiato";
-    accent = "mocha";
+    flavor = "mocha";
   };
 }
