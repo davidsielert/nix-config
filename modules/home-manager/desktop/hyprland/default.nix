@@ -6,6 +6,7 @@
   ...
 }: {
   imports = [
+    ./config.nix
     "${nhModules}/misc/gtk"
     "${nhModules}/misc/wallpaper"
     "${nhModules}/misc/xdg"
