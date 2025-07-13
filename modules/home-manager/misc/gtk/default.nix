@@ -36,6 +36,5 @@
     accent = "mauve"; # Optional
     size = "compact"; # Optional
     tweaks = ["rimless"]; # Optional
-    variant = "mocha";
   };
 }
