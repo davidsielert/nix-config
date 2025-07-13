@@ -4,7 +4,6 @@
   pkgs,
   ...
 }: {
-  imports = [./patch_kubectl.nix];
   home.packages = with pkgs; [
     wakatime-cli
   ];
