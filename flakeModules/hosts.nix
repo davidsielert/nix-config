@@ -97,7 +97,7 @@ in {
 
   flake.homeConfigurations = {
     "dsielert@mbp14" = mkHomeConfiguration "aarch64-darwin" "dsielert" "mbp14";
-    "dsielert@nixosvm" = mkHomeConfiguration "aarch64-linux" "dsielert" "nixosvm";
+    "dsielert@nixosvm" = mkHomeConfiguration "x86_64-linux" "dsielert" "nixosvm";
   };
 
   ######################################################################
