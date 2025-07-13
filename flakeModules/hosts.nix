@@ -75,7 +75,10 @@
         userConfig = users.${username};
         nhModules = "${self}/modules/home-manager";
       };
-      modules = [./../home/${username}/${hostname}];
+      modules = [
+        ./../home/${username}/${hostname}
+        inputs.homeModules.catppuccin
+      ];
     };
 in {
   ######################################################################
