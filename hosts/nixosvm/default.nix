@@ -6,6 +6,8 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+
+    ./../../modules/common
     "${nixosModules}/common"
     "${nixosModules}/desktop/hyprland"
   ];

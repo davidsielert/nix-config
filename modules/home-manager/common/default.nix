@@ -29,15 +29,14 @@
     ../programs/k9s
     ../programs/krew
     ../programs/lazygit
-    ../programs/neovim
+    #../programs/neovim
     ../programs/obs-studio
     ../programs/saml2aws
-    ../programs/starship
+    # ../programs/starship
     ../programs/telegram
-    ../programs/tmux
+    #j../programs/tmux
     ../programs/ulauncher
-    ../programs/zsh
-    ../services/flatpak
+    #jku../programs/zsh
   ];
 
   # Home-Manager configuration for the user's home environment
