@@ -184,6 +184,8 @@
     extraConfig = ''
       set -gu default-command
       set -g default-shell "\${pkgs.fish}/bin/fish"
+      set-option -g default-terminal "screen-256color"
+      set-option -sg escape-time 10
     '';
 
     keyMode = "vi";

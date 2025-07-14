@@ -133,7 +133,7 @@ keymap.set('n', '<space>tq', vim.cmd.tabclose, { desc = '[t]ab: [q]uit/close' })
 
 local severity = diagnostic.severity
 
-keymap.set('n', '<space>e', function()
+keymap.set('n', '<space>dm', function()
   local _, winid = diagnostic.open_float(nil, { scope = 'line' })
   if not winid then
     vim.notify('no diagnostics found', vim.log.levels.INFO)
@@ -205,3 +205,9 @@ keymap.set('n', '<C-b>', '<C-b>zz', { desc = 'move UP full-page and center' })
 --     vim.opt.hlsearch = vim.tbl_contains({ '<CR>', 'n', 'N', '*', '#', '?', '/' }, vim.fn.keytrans(char))
 --   end
 -- end, auto_hlsearch_namespace)
+-- Set up the keymap to toggle nvim-tree
+vim.api.nvim_set_keymap("n", "<leader>e", ":NvimTreeToggle<CR>", {
+  noremap = true,
+  silent = true,
+  desc = "Toggle NvimTree", -- A description for the keymap (useful for which-key)
+})
