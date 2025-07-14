@@ -78,7 +78,7 @@
     interactiveShellInit = ''
 
       status is-interactive; and begin
-        set fish_tmux_autostart true
+        set fish_tmux_autostart false
       end
         # ~/.config/fish/config.fish
         set -gx HOMEBREW_PREFIX /opt/homebrew
