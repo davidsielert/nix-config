@@ -77,9 +77,9 @@
     '';
     interactiveShellInit = ''
 
-      status is-interactive; and begin
-        set fish_tmux_autostart false
-      end
+      # status is-interactive; and begin
+      #   set fish_tmux_autostart false
+      # end
         # ~/.config/fish/config.fish
         set -gx HOMEBREW_PREFIX /opt/homebrew
         set -gx HOMEBREW_CELLAR /opt/homebrew/Cellar
@@ -141,12 +141,12 @@
     enable = true;
   };
   programs.zsh = {
-    enable = true;
+    enable = false;
     enableCompletion = true;
     initContent = lib.mkBefore ''
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
       ZSH_TMUX_AUTOSTART=''${ZSH_TMUX_AUTOSTART:-true}
-      ZSH_TMUX_AUTOSTART_ONCE=true
+      ZSH_TMUX_AUTOSTART_ONCE=false
       ZSH_TMUX_DEFAULT_SESSION_NAME=main
       DISABLE_AUTO_UPDATE=true
       DISABLE_UPDATE_PROMPT=true

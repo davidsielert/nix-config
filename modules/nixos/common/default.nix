@@ -21,7 +21,7 @@
 
   # Register flake inputs for nix commands
   nix.registry = lib.mapAttrs (_: flake: {inherit flake;}) (lib.filterAttrs (_: lib.isType "flake") inputs);
-
+  imports = [../programs/fish];
   # Add inputs to legacy channels
   nix.nixPath = ["/etc/nix/path"];
   environment.etc =
@@ -131,7 +131,7 @@
     description = userConfig.fullName;
     extraGroups = ["networkmanager" "wheel" "docker"];
     isNormalUser = true;
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   # Set User's avatar
