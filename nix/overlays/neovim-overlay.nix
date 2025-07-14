@@ -107,6 +107,7 @@ with final.pkgs.lib; let
     plenary-nvim
     telescope-ui-select-nvim
     cmp-tabnine
+    nvim-tree-lua
   ];
 
   extraPackages = with pkgs; [

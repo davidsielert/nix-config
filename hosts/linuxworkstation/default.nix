@@ -26,6 +26,16 @@
 
   # Set hostname
   networking.hostName = hostname;
+  # Set Parameters required for hibernation
+  # boot.kernelParams = ["resume_offset=<offset>"];
+  boot.resumeDevice = "/dev/disk/by-uuid/650d65ea-024a-4a1b-9f5e-d4816feda54f";
+  powerManagement.enable = true;
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 32 * 1024;
+    }
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

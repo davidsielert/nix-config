@@ -68,7 +68,7 @@
   };
 
   # Timezone
-  time.timeZone = "Europe/Warsaw";
+  time.timeZone = "America/Los_Angeles";
 
   # Internationalization
   i18n.defaultLocale = "en_US.UTF-8";
