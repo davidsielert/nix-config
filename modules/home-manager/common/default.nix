@@ -32,7 +32,7 @@
     #jku../programs/zsh
     ../programs/rofi
   ];
-
+  news.display = "silent";
   # Home-Manager configuration for the user's home environment
   home = {
     username = "${userConfig.name}";
