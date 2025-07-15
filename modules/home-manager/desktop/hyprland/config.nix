@@ -168,7 +168,7 @@
       #──────────────────── key-bindings (64) ─────────────#
       bind = [
         # app launches & layout
-        "$mainMod , Return, exec, ghostty"
+        "$mainMod SHIFT, Return, exec, ghostty"
         "$mainMod , F2, exec, vivaldi"
         "$mainMod SHIFT, F, exec, nautilus"
         "$mainMod SHIFT, T, exec, Telegram"
