@@ -21,10 +21,10 @@
     ../programs/btop
     ../programs/fastfetch
     ../programs/fzf
-    #    ../programs/go
+    ../programs/go
     ../programs/gpg
-    #    ../programs/k9s
-    #    ../programs/krew
+    ../programs/k9s
+    ../programs/krew
     ../programs/lazygit
     ../programs/obs-studio
     ../programs/saml2aws

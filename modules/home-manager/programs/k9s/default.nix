@@ -8,7 +8,7 @@
         logoless = true;
       };
     };
-    hotKeys = {
+    hotkey = {
       shift-1 = {
         shortCut = "Shift-1";
         description = "Show pods";
