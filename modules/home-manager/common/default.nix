@@ -15,7 +15,7 @@
     ../programs/git
     ../programs/terminal
     ../misc/qt
-    ../programs/alacritty
+    # ../programs/alacritty
     ../programs/atuin
     ../programs/bat
     ../programs/btop
