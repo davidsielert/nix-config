@@ -16,6 +16,28 @@
     "${nhModules}/services/swaync"
     "${nhModules}/services/waybar"
   ];
+  home.packages = with pkgs; [
+    alacritty
+    vivaldi
+    nautilus
+    gnome-calculator
+    dconf-editor
+    gnome-pomodoro
+    pamixer
+    grim
+    slurp
+    swappy
+    brightnessctl
+    hyprpaper
+    hypridle
+    hyprpicker
+    swaynotificationcenter
+    wl-clipboard
+    cliphist
+    rofi-wayland
+    hyprlock
+    # your custom scripts assumed to be in ~/.local/bin
+  ];
 
   # Consistent cursor theme across all applications.
   home.pointerCursor = {

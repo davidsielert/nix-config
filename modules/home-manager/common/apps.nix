@@ -35,12 +35,8 @@
     # productivity
     glow # markdown previewer in terminal
     zoxide
-    #sqlFormatter
-    #eslint
     nodejs_22
-    #inputs.Neve.packages.${pkgs.system}.default
 
-    # khanelivim.packages.${system}.default
     zsh-autoenv
     zsh-autocomplete
     awscli2
@@ -61,6 +57,15 @@
     alejandra
     fastfetch
     ghostty
+    stylua
+    mercurial
+    tree-sitter
+    gh
+    fd
+    clang
+    cmake
+    ninja
+    wakatime-cli
   ];
   programs = {
     eza = {

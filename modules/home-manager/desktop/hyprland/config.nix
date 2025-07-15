@@ -246,29 +246,4 @@
       ];
     };
   };
-
-  # Helper packages referenced by your binds / execs
-  # (add or remove as needed)
-  home.packages = with pkgs; [
-    alacritty
-    vivaldi
-    nautilus
-    gnome-calculator
-    dconf-editor
-    gnome-pomodoro
-    pamixer
-    grim
-    slurp
-    swappy
-    brightnessctl
-    hyprpaper
-    hypridle
-    hyprpicker
-    swaynotificationcenter
-    wl-clipboard
-    cliphist
-    rofi-wayland
-    hyprlock
-    # your custom scripts assumed to be in ~/.local/bin
-  ];
 }
