@@ -29,6 +29,9 @@
   # Set Parameters required for hibernation
   # boot.kernelParams = ["resume_offset=<offset>"];
   boot.resumeDevice = "/dev/disk/by-uuid/650d65ea-024a-4a1b-9f5e-d4816feda54f";
+  boot.kernelParams = ["resume_offset=ef53"];
+  # if above doesn't work, try this:
+  # boot.initrd.systemd.enable = true;
   powerManagement.enable = true;
   swapDevices = [
     {
