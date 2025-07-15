@@ -28,15 +28,15 @@
   networking.hostName = hostname;
   # Set Parameters required for hibernation
   # boot.kernelParams = ["resume_offset=<offset>"];
-  boot.resumeDevice = "/dev/disk/by-uuid/650d65ea-024a-4a1b-9f5e-d4816feda54f";
-  boot.kernelParams = ["resume_offset=ef53"];
+  boot.resumeDevice = "/dev/disk/by-uuid/8781e422-f382-4250-859b-5a249da1c416";
+  # boot.kernelParams = ["resume_offset=ef53"];
   # if above doesn't work, try this:
-  # boot.initrd.systemd.enable = true;
+  boot.initrd.systemd.enable = true;
   powerManagement.enable = true;
   swapDevices = [
     {
-      device = "/var/lib/swapfile";
-      size = 32 * 1024;
+      device = "/dev/disk/by-uuid/8781e422-f382-4250-859b-5a249da1c416";
+      priority = 0;
     }
   ];
 
