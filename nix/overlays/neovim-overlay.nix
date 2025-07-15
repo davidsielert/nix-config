@@ -117,8 +117,8 @@ with final.pkgs.lib; let
     yaml-language-server
     typescript-language-server
     svelte-language-server
-    python312Packages.jedi-language-server
-    python312Packages.mypy
+    python313Packages.jedi-language-server
+    python313Packages.mypy
     biome
     nil # nix LSP
     vscode-langservers-extracted
@@ -129,6 +129,7 @@ in {
   # This is the neovim derivation
   # returned by the overlay
   nvim-pkg = mkNeovim {
+    appName = "nvim";
     plugins = all-plugins;
     inherit extraPackages;
   };
