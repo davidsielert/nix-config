@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.neovim.enable = false;
+  #programs.neovim.enable = false;
   environment.systemPackages = with pkgs; [
     # neovim
     git
