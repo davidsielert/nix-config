@@ -75,6 +75,12 @@
       # set fish_user_paths $fish_user_paths
 
     '';
+    interactiveShellInit = ''
+      # Load Nix environment into fish
+      for file in /etc/fish/conf.d/*.fish
+        source $file
+      end
+    '';
     #interactiveShellInit = ''
 
     # status is-interactive; and begin
