@@ -7,7 +7,7 @@
     owner = "adi1090x";
     repo = "rofi";
     rev = "master"; # You can pin this to a specific commit hash for reproducibility
-    sha256 = "sha256-yMKpwxdwvp7ryz2XXunbjC/5ud9HHEDzyYRhM540958="; # Replace with the actual hash
+    sha256 = "sha256-iUX0Quae06tGd7gDgXZo1B3KYgPHU+ADPBrowHlv02A="; # Replace with the actual hash
   };
 in {
   # ... your other home-manager configuration
