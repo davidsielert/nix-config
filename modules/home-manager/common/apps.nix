@@ -56,7 +56,8 @@
     nixpkgs-fmt
     alejandra
     fastfetch
-    ghostty
+    # disabled because it is broken on darwin
+    # ghostty
     stylua
     mercurial
     tree-sitter

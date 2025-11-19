@@ -40,7 +40,7 @@
       # use the exact commit
       url = "github:NixOS/nixpkgs/fb80ed6efd437ac2ef2f98681d8a06c08fc5966e";
     };
-    catppuccin.url = "github:catppuccin/nix";
+    catppuccin.url = "github:catppuccin/nix?ref=release-25.05";
     ghostty = {
       url = "github:ghostty-org/ghostty";
     };
