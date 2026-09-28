@@ -2,6 +2,7 @@
   imports = [./apps.nix];
   # System # Add ability to use TouchID for sudo
   security.pam.services.sudo_local.touchIdAuth = true;
+  programs.fish.enable = true;
   system = {
     primaryUser = userConfig.name;
     defaults = {

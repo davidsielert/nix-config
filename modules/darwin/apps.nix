@@ -57,6 +57,7 @@
 
       # Development
       "insomnia" # REST client
+      "mactex" # LaTeX distribution
       # "wireshark" # network analyzer
     ];
   };

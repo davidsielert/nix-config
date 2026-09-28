@@ -105,7 +105,8 @@
 
   # PATH configuration
   environment.localBinInPath = true;
-
+  # (Optional but nice) make fish an allowed / default login shell
+  environment.shells = [pkgs.fish];
   # Disable CUPS printing
   services.printing.enable = false;
 
